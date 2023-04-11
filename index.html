@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Степанов Игорь">
+    <link rel="stylesheet" href="pages/index.css">
+    <title>Место</title>
+</head>
+
+<body class="body">
+    <div class="page">
+        <header class="header">
+            <a href="#" target="_blank">
+                <img src="images/logo.svg" alt="Логотип" class="header__logo">
+            </a>
+        </header>
+
+        <main class="content">
+            <section class="profile">
+                <div class="profile__avatar"></div>
+                <div class="profile__info">
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button class="profile__button-edit" type="button"></button>
+                    <p class="profile__direction">Исследователь океана</p>
+                </div>
+                <button class="profile__button"></button>
+            </section>
+
+            <section class="elements">
+                <div class="element">
+                    <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="element__image">
+                    <div class="element__group">
+                        <h2 class="element__title">Карачаевск</h2>
+                        <button class="element__like"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="element__image">
+                    <div class="element__group">
+                        <h2 class="element__title">Гора Эльбрус</h2>
+                        <button class="element__like"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="element__image">
+                    <div class="element__group">
+                        <h2 class="element__title">Домбай</h2>
+                        <button class="element__like"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="element__image">
+                    <div class="element__group">
+                        <h2 class="element__title">Гора Эльбрус</h2>
+                        <button class="element__like"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="element__image">
+                    <div class="element__group">
+                        <h2 class="element__title">Домбай</h2>
+                        <button class="element__like"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкессия" class="element__image">
+                    <div class="element__group">
+                        <h2 class="element__title">Карачаево-Черкессия</h2>
+                        <button class="element__like"></button>
+                    </div>
+                </div>
+            </section>
+        </main> 
+
+        <footer class="footer">
+            <p class="footer__copyright">© 2020 Mesto Russia</p>
+        </footer>
+    </div>
+
+    <div class="popup popup_opened">
+        <div class="popup__container">
+            <button class="popup__button"></button>
+            <div class="popup__form">
+                <h3 class="popup__title">Редактировать профиль</h3>
+                <form class="form">
+                    <input class="form__field" type="text" required name="firstname" placeholder="Жак-Ив Кусто">
+                    <input class="form__field" type="text" required name="post" placeholder="Исследователь океана">
+                    <button type="submit" class="form__submit-button">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

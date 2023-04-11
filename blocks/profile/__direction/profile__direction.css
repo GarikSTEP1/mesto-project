@@ -1,0 +1,15 @@
+.profile__direction {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 898px) {
+    .profile__direction {
+        font-size: 14px;
+    }
+}
