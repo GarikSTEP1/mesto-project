@@ -1,4 +1,11 @@
 .form {
     display: flex;
     flex-direction: column;
+    padding-top: 54px;
+}
+
+@media screen and (max-width: 898px) {
+    .form {
+        padding-top: 75px;
+    }
 }

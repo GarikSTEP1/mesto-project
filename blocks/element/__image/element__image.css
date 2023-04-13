@@ -1,4 +1,6 @@
 .element__image {
     position: relative;
     top: 0;
+    object-fit: cover;
+    object-position: center center;
 }

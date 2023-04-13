@@ -3,6 +3,7 @@
     grid-template-columns: 294px 1fr;
     gap: 16px 18px;
     align-items: center;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 898px) {

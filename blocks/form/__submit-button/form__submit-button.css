@@ -1,5 +1,4 @@
 .form__submit-button {
-    height: 50px;
     background-color: black;
     color: white;
     font-size: 18px;
@@ -9,6 +8,7 @@
     border: 0;
     cursor: pointer;
     width: 100%;
+    padding: 16px 0;
 }
 
 .form__submit-button:hover {

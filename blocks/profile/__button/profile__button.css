@@ -8,6 +8,7 @@
     color: inherit;
     background-color: transparent;
     cursor: pointer;
+    background-size: 22px 22px;
 }
 
 .profile__button:hover {
@@ -18,5 +19,6 @@
     .profile__button {
         width: 282px;
         padding: 0;
+        background-size: 16px 16px;
     }
 }
