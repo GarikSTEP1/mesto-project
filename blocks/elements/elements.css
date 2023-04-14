@@ -8,3 +8,9 @@
     margin: 0 auto;
     padding: 50px 19px 0 19px;
 }
+
+@media screen and (max-width: 898px) {
+    .elements {
+        padding: 36px 19px 0 19px;
+    }
+}

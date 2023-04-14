@@ -14,5 +14,6 @@
     .profile__name {
         font-size: 27px;
         width: 189px;
+        text-align: center;
     }
 }

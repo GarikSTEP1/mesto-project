@@ -14,5 +14,6 @@
     .profile__direction {
         font-size: 14px;
         width: 189px;
+        text-align: center;
     }
 }
