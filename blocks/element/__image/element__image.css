@@ -1,8 +1,8 @@
 .element__image {
     position: relative;
-    top: 0;
     object-fit: cover;
     object-position: center center;
     width: 282px;
     height: 282px;
+    flex-shrink: 0;
 }

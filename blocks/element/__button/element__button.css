@@ -1,8 +1,8 @@
-.element__like {
+.element__button {
     cursor: pointer;
     width: 22px;
     height: 19px;
-    background-image: url(../../../images/element__like.svg);
+    background-image: url(../../../images/element_like.svg);
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
@@ -11,6 +11,6 @@
     padding: 0;
 }
 
-.element__like:hover {
+.element__button:hover {
     opacity: 0.5;
 }
