@@ -1,5 +1,4 @@
 const popupEditProfile = document.querySelector('#popup-edit-profile')
-const closeBtnEditProfile = popupEditProfile.querySelector('.popup__button')
 const btnEditProfile = document.querySelector('.profile__button-edit')
 
 const profileName = document.querySelector('.profile__name')
@@ -12,15 +11,14 @@ const formEditProfile = popupEditProfile.querySelector('.form')
 
 const popupAddCard = document.querySelector('#popup-add-card')
 const formAddCard = popupAddCard.querySelector('.form')
-const closeBtnAddCard = popupAddCard.querySelector('.popup__button')
 const btnAddCard = document.querySelector('.profile__button')
 const popupFormFieldPlace = popupAddCard.querySelector('.form__field_type_place')
 const popupFormFieldLink = popupAddCard.querySelector('.form__field_type_link')
 
 const popupImage = document.querySelector('#popup-image')
-const closeBtnImage = popupImage.querySelector('.popup__button')
 
-
+const imagePlace = popupImage.querySelector('.popup__image-place')
+const textPlace = popupImage.querySelector('.popup__text')
 
 
 function openPopup (popupEl) {
@@ -32,7 +30,6 @@ function closePopup (popupEl) {
 }
 
 btnEditProfile.addEventListener('click', () => openPopup (popupEditProfile))
-closeBtnEditProfile.addEventListener('click', () => closePopup (popupEditProfile))
 
 btnEditProfile.addEventListener('click', () => {
     popupFormFieldName.value = profileName.textContent
@@ -56,26 +53,20 @@ const elementsSection = document.querySelector('.elements')
 function createCard(cardData) {
     const cardElement = cardTemplate.querySelector('.element').cloneNode(true)
     const imageEl = cardElement.querySelector('.element__image')
+    const textEl = cardElement.querySelector('.element__title')
 
-    const src = cardData.link
-    const text = cardData.name
-
-    imageEl.src = src
-    imageEl.alt = text
-
-    cardElement.querySelector('.element__image').scr = src
-    cardElement.querySelector('.element__title').textContent = text
+    imageEl.src = cardData.link
+    imageEl.alt = cardData.name
+    textEl.textContent = cardData.name
 
     cardElement.querySelector('.element__button').addEventListener('click', (evt) => evt.target.classList.toggle('element__button_active'))
 
     cardElement.querySelector('.element__trash').addEventListener('click', (evt) => evt.target.closest('.element').remove())
 
     imageEl.addEventListener('click', () => {
-        const img = popupImage.querySelector('.popup__image-place')
-        const t = popupImage.querySelector('.popup__text')
-        img.src = src
-        img.alt = text
-        t.textContent = text
+        imagePlace.src = cardData.link
+        imagePlace.alt = cardData.name
+        textPlace.textContent = cardData.name
         openPopup(popupImage)
     })
 
@@ -95,7 +86,6 @@ addCard(item)
 
 
 btnAddCard.addEventListener('click', () => openPopup (popupAddCard))
-closeBtnAddCard.addEventListener('click', () => closePopup (popupAddCard))
 
 
 
@@ -108,15 +98,42 @@ formAddCard.addEventListener ('submit', (evt) => {
     })
         
     closePopup(popupAddCard)
+    popupFormFieldPlace.value = ''
+    popupFormFieldLink.value = ''
 })
 
 
 
 
-closeBtnImage.addEventListener('click', () => closePopup(popupImage))
+document.querySelectorAll('.popup__button').forEach(button => {
+    const buttonsPopup = button.closest('.popup')
+    button.addEventListener('click', () => closePopup(buttonsPopup))
+  })
 
 
 
+/*const closeBtnEditProfile = popupEditProfile.querySelector('.popup__button')*/
+/*const closeBtnAddCard = popupAddCard.querySelector('.popup__button')*/
+/*const closeBtnImage = popupImage.querySelector('.popup__button')*/
+/*closeBtnEditProfile.addEventListener('click', () => closePopup (popupEditProfile))*/
+/*closeBtnAddCard.addEventListener('click', () => closePopup (popupAddCard))*/
+/*closeBtnImage.addEventListener('click', () => closePopup(popupImage))*/
+/*imageEl.addEventListener('click', () => {
+        const img = popupImage.querySelector('.popup__image-place')
+        const t = popupImage.querySelector('.popup__text')
+        img.src = src
+        img.alt = text
+        t.textContent = text
+        openPopup(popupImage)
+    })*/
+/*const src = cardData.link
+    const text = cardData.name
+
+    imageEl.src = src
+    imageEl.alt = text
+
+    cardElement.querySelector('.element__image').scr = src
+    cardElement.querySelector('.element__title').textContent = text*/
 
 
 

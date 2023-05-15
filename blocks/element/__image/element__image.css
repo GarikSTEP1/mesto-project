@@ -5,4 +5,5 @@
     width: 282px;
     height: 282px;
     flex-shrink: 0;
+    cursor: pointer;
 }
